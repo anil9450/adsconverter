@@ -82,7 +82,7 @@ export default function Home() {
         <div className="col-span-full mt-14">
           <label className="block text-base font-semibold leading-7 text-gray-900">
             Output in the form of Popup & Single Line Script
-            <span className="m-5">
+            <span className="p-5">
               <button
                 className="p-1 bg-slate-900 rounded text-white"
                 onClick={() => copyToClipboard(`${output}`)}
