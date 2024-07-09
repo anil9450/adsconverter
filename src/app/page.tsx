@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import useClipboardCopy from "@/hooks/useClipboardCopy";
 
 export default function Home() {
   const [ads, setAds] = useState("");
@@ -23,6 +24,8 @@ export default function Home() {
     setUrl("");
     setOutput("");
   };
+
+  const copyToClipboard = useClipboardCopy();
 
   return (
     <main className="">
@@ -79,6 +82,14 @@ export default function Home() {
         <div className="col-span-full mt-14">
           <label className="block text-base font-semibold leading-7 text-gray-900">
             Output in the form of Popup & Single Line Script
+            <span className="m-5">
+              <button
+                className="p-1 bg-slate-900 rounded text-white"
+                onClick={() => copyToClipboard(`${output}`)}
+              >
+                Copy
+              </button>
+            </span>
           </label>
           <div className="">
             <textarea className="w-full h-72 rounded p-5" value={output} />
