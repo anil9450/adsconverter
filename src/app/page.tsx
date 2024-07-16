@@ -24,7 +24,6 @@ export default function Home() {
   };
 
   const handleOnChange = (value: string) => {
-    console.log(value);
     setCurrentScript(value);
     if (value === "script1") {
       setOutput(data.table1);
@@ -73,7 +72,7 @@ export default function Home() {
     <main className="">
       <div className="m-4">
         <Dropdown
-          label={currentScript}
+          label={"Click to Select"}
           defaultValue={currentScript}
           value={currentScript}
         >
@@ -81,67 +80,67 @@ export default function Home() {
             value={"script1"}
             onClick={() => handleOnChange("script1")}
           >
-            Script1
+            ***POP-UP Ad***
           </Dropdown.Item>
           <Dropdown.Item
             value={"script2"}
             onClick={() => handleOnChange("script2")}
           >
-            Script2
+            ****BOTTOM ANCHOR****
           </Dropdown.Item>
           <Dropdown.Item
             value={"script3"}
             onClick={() => handleOnChange("script3")}
           >
-            Script3
+            ****TOP ANCHOR AD****
           </Dropdown.Item>
           <Dropdown.Item
             value={"script4"}
             onClick={() => handleOnChange("script4")}
           >
-            Script4
+            ****INTERSTITIAL Ad****
           </Dropdown.Item>
           <Dropdown.Item
             value={"script5"}
             onClick={() => handleOnChange("script5")}
           >
-            Script5
+            ****Bottom sticky refresh ad****
           </Dropdown.Item>
           <Dropdown.Item
             value={"script6"}
             onClick={() => handleOnChange("script6")}
           >
-            Script6
+            ******RESPONSIVE Ad******
           </Dropdown.Item>
           <Dropdown.Item
             value={"script7"}
             onClick={() => handleOnChange("script7")}
           >
-            Script7
+            ***300X250 ad***
           </Dropdown.Item>
           <Dropdown.Item
             value={"script8"}
             onClick={() => handleOnChange("script8")}
           >
-            Script8
+            ***300X600 Side-bar ad***
           </Dropdown.Item>
           <Dropdown.Item
             value={"script9"}
             onClick={() => handleOnChange("script9")}
           >
-            Script9
+            *****FLYING CARPET Ad****
           </Dropdown.Item>
           <Dropdown.Item
             value={"script10"}
             onClick={() => handleOnChange("script10")}
           >
-            Script10
+            ***LEFT SIDE STICKY Ad***
           </Dropdown.Item>
           <Dropdown.Item
             value={"script11"}
             onClick={() => handleOnChange("script11")}
           >
-            Script11
+            ****RIGHT SIDE STICKY AD****
           </Dropdown.Item>
         </Dropdown>
 
