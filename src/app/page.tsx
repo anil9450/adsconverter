@@ -9,7 +9,8 @@ export default function Home() {
   const [ads, setAds] = useState("");
   const [url, setUrl] = useState("");
   const [output, setOutput] = useState("");
-  const [currentScript, setCurrentScript] = useState("script1");
+  const [scriptName, setScriptName] = useState("Click to Select");
+  /* const [currentScript, setCurrentScript] = useState("Click to Select"); */
 
   const handleConvert = async () => {
     const response = await fetch("/api", {
@@ -17,47 +18,14 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ adsSlot: ads, url }),
+      body: JSON.stringify({ adsSlot: ads, url, scriptName }),
     });
     const data = await response.json();
     setOutput(data);
   };
 
   const handleOnChange = (value: string) => {
-    setCurrentScript(value);
-    if (value === "script1") {
-      setOutput(data.table1);
-    }
-    if (value === "script2") {
-      setOutput(data.table2[0]);
-    }
-    if (value === "script3") {
-      setOutput(data.table3[0]);
-    }
-    if (value === "script4") {
-      setOutput(data.table4[0]);
-    }
-    if (value === "script5") {
-      setOutput(data.table5[0]);
-    }
-    if (value === "script6") {
-      setOutput(data.table6[0]);
-    }
-    if (value === "script7") {
-      setOutput(data.table7[0]);
-    }
-    if (value === "script8") {
-      setOutput(data.table8[0]);
-    }
-    if (value === "script9") {
-      setOutput(data.table9[0]);
-    }
-    if (value === "script10") {
-      setOutput(data.table10[0]);
-    }
-    if (value === "script11") {
-      setOutput(data.table11[0]);
-    }
+    setScriptName(value);
   };
 
   const handleReset = () => {
@@ -71,82 +39,86 @@ export default function Home() {
   return (
     <main className="">
       <div className="m-4">
-        <Dropdown
-          label={"Click to Select"}
-          defaultValue={currentScript}
-          value={currentScript}
-        >
-          <Dropdown.Item
-            value={"script1"}
-            onClick={() => handleOnChange("script1")}
-          >
-            ***POP-UP Ad***
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script2"}
-            onClick={() => handleOnChange("script2")}
-          >
-            ****BOTTOM ANCHOR****
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script3"}
-            onClick={() => handleOnChange("script3")}
-          >
-            ****TOP ANCHOR AD****
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script4"}
-            onClick={() => handleOnChange("script4")}
-          >
-            ****INTERSTITIAL Ad****
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script5"}
-            onClick={() => handleOnChange("script5")}
-          >
-            ****Bottom sticky refresh ad****
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script6"}
-            onClick={() => handleOnChange("script6")}
-          >
-            ******RESPONSIVE Ad******
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script7"}
-            onClick={() => handleOnChange("script7")}
-          >
-            ***300X250 ad***
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script8"}
-            onClick={() => handleOnChange("script8")}
-          >
-            ***300X600 Side-bar ad***
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script9"}
-            onClick={() => handleOnChange("script9")}
-          >
-            *****FLYING CARPET Ad****
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script10"}
-            onClick={() => handleOnChange("script10")}
-          >
-            ***LEFT SIDE STICKY Ad***
-          </Dropdown.Item>
-          <Dropdown.Item
-            value={"script11"}
-            onClick={() => handleOnChange("script11")}
-          >
-            ****RIGHT SIDE STICKY AD****
-          </Dropdown.Item>
-        </Dropdown>
+        <div className="flex">
+          <div className="flex-auto mt-8">
+            <Dropdown
+              className=""
+              label={scriptName}
+              defaultValue={scriptName}
+              value={scriptName}
+            >
+              <Dropdown.Item
+                value={"***POP-UP Ad***"}
+                onClick={() => handleOnChange("***POP-UP Ad***")}
+              >
+                ***POP-UP Ad***
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"****BOTTOM ANCHOR****"}
+                onClick={() => handleOnChange("****BOTTOM ANCHOR****")}
+              >
+                ****BOTTOM ANCHOR****
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"****TOP ANCHOR AD****"}
+                onClick={() => handleOnChange("****TOP ANCHOR AD****")}
+              >
+                ****TOP ANCHOR AD****
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"****INTERSTITIAL Ad****"}
+                onClick={() => handleOnChange("****INTERSTITIAL Ad****")}
+              >
+                ****INTERSTITIAL Ad****
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"****Bottom sticky refresh ad****"}
+                onClick={() =>
+                  handleOnChange("****Bottom sticky refresh ad****")
+                }
+              >
+                ****Bottom sticky refresh ad****
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"******RESPONSIVE Ad******"}
+                onClick={() => handleOnChange("******RESPONSIVE Ad******")}
+              >
+                ******RESPONSIVE Ad******
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"***300X250 ad***"}
+                onClick={() => handleOnChange("***300X250 ad***")}
+              >
+                ***300X250 ad***
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"***300X600 Side-bar ad***"}
+                onClick={() => handleOnChange("***300X600 Side-bar ad***")}
+              >
+                ***300X600 Side-bar ad***
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"*****FLYING CARPET Ad****"}
+                onClick={() => handleOnChange("*****FLYING CARPET Ad****")}
+              >
+                *****FLYING CARPET Ad****
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"***LEFT SIDE STICKY Ad***"}
+                onClick={() => handleOnChange("***LEFT SIDE STICKY Ad***")}
+              >
+                ***LEFT SIDE STICKY Ad***
+              </Dropdown.Item>
+              <Dropdown.Item
+                value={"****RIGHT SIDE STICKY AD****"}
+                onClick={() => handleOnChange("****RIGHT SIDE STICKY AD****")}
+              >
+                ****RIGHT SIDE STICKY AD****
+              </Dropdown.Item>
+            </Dropdown>
+          </div>
 
-        <div>
-          {/* <div className="grid sm:gap-96 grid-cols-1 gap-10 sm:grid-cols-3">
-          <div className="">
+          <div className="flex-auto">
             <label className="block text-base font-semibold leading-7 text-gray-900">
               Ads Slot
             </label>
@@ -160,7 +132,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="">
+          <div className="flex-auto">
             <label className="block text-base font-semibold leading-7 text-gray-900">
               Website URL
             </label>
@@ -173,8 +145,10 @@ export default function Home() {
               />
             </p>
           </div>
+        </div>
 
-          <div className="mt-6">
+        <div className="flex place-content-center mt-10">
+          <div className="">
             <button
               type="button"
               className="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold
@@ -192,7 +166,6 @@ export default function Home() {
               Reset
             </button>
           </div>
-        </div> */}
         </div>
 
         <div className="col-span-full mt-14">

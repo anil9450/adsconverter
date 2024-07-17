@@ -1,6 +1,11 @@
+interface ScriptsProps {
+  adsSlot: string;
+  url: string;
+}
+
 const data = {
   table1: `
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <div id="ad-popup">
   <style id="style">
   </style>
@@ -68,9 +73,9 @@ const data = {
   })
   </script>
     `,
-  table2: [
-    `
-      Head Code
+
+  table2: `
+  Head Code
   —-----------
   <script>
   window.googletag = window.googletag || {cmd: []};
@@ -86,11 +91,9 @@ const data = {
   });
   </script>
     `,
-  ],
 
-  table3: [
-    `
-      <script>
+  table3: `
+  <script>
   window.googletag = window.googletag || {cmd: []};
   var anchorSlot;
   googletag.cmd.push(function() {
@@ -104,11 +107,9 @@ const data = {
   });
   </script>
       `,
-  ],
 
-  table4: [
-    `
-        Head code
+  table4: `
+  Head code
   ======
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script>
@@ -132,11 +133,9 @@ const data = {
   });
   </script>
       `,
-  ],
 
-  table5: [
-    `
-        Head code
+  table5: `
+  Head code
   =============
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script>
@@ -210,11 +209,9 @@ const data = {
   }
   </script>
       `,
-  ],
 
-  table6: [
-    `
-      Head Code
+  table6: `
+  Head Code
   ======
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script>
@@ -239,11 +236,9 @@ const data = {
   </script>
   </div>
       `,
-  ],
 
-  table7: [
-    `
-        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  table7: `
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <div id="Monetiscope_300X250_1">
   <script>
   window.googletag = window.googletag || {cmd: []};
@@ -257,11 +252,9 @@ const data = {
   </script>
   </div>
       `,
-  ],
 
-  table8: [
-    `
-        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  table8: `
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <div id="monetiscope_300X600_1">
   <script>
   window.googletag = window.googletag || {cmd: []};
@@ -275,11 +268,9 @@ const data = {
   </script>
   </div>
       `,
-  ],
 
-  table9: [
-    `
-        <style>
+  table9: `
+  <style>
   .parallax-ad-container{position:relative;width:100%;height:320px;margin:0
   auto;overflow:hidden}.parallax-ad{position:absolute!important;top:0!important;left:0!important;wi
   dth:100%!important;height:100%!important;border:0!important;margin:0!important;padding:0!im
@@ -319,11 +310,9 @@ const data = {
   erval(interval,100)})
   </script>
       `,
-  ],
 
-  table10: [
-    `
-        Head Code
+  table10: `
+  Head Code
   —------------
   <script async
   src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script><script>window.googletag=wi
@@ -350,11 +339,9 @@ const data = {
   change_css_Left(){document.getElementById('closebtn_Left').style.cssText='display:none;';}</sc
   ript>
       `,
-  ],
 
-  table11: [
-    `
-      Head Code
+  table11: `
+  Head Code
   —------------
   <script async
   src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script><script>window.googletag=wi
@@ -381,7 +368,6 @@ const data = {
   change_css_Right(){document.getElementById('closebtn_Right').style.cssText='display:none;';}
   </script>
     `,
-  ],
 };
 
 export default data;
