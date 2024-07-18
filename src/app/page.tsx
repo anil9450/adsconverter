@@ -32,6 +32,7 @@ export default function Home() {
     setAds("");
     setUrl("");
     setOutput("");
+    setScriptName("Select to Click");
   };
 
   const copyToClipboard = useClipboardCopy();
@@ -39,7 +40,7 @@ export default function Home() {
   return (
     <main className="">
       <div className="m-4">
-        <div className="flex">
+        <div className="grid sm:grid-cols-3 sm:gap-32 gap-4 grid-cols">
           <div className="flex-auto mt-8">
             <Dropdown
               className=""
