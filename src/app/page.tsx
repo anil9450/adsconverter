@@ -120,7 +120,7 @@ export default function Home() {
           </div>
 
           <div className="flex-auto">
-            <label className="block text-base font-semibold leading-7 text-gray-900">
+            <label className="block text-base font-semibold leading-7 text-blue-600">
               Ads Slot
             </label>
             <p>
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
 
           <div className="flex-auto">
-            <label className="block text-base font-semibold leading-7 text-gray-900">
+            <label className="block text-base font-semibold leading-7 text-blue-600">
               Website URL
             </label>
             <p>
@@ -170,7 +170,7 @@ export default function Home() {
         </div>
 
         <div className="col-span-full mt-14">
-          <label className="block text-base font-semibold leading-7 text-gray-900">
+          <label className="block text-base font-semibold leading-7 text-blue-600">
             Output in the form of Popup & Single Line Script
             <span className="p-5">
               <button
