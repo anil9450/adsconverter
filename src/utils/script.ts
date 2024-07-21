@@ -384,47 +384,47 @@ Head Code
 };
 
 const generateScript = ({ adsSlot, url, scriptName }: ScriptsCombProps) => {
-  if (scriptName === "***POP-UP Ad***") {
+  if (scriptName === "POP-UP Ad") {
     return getScript1({ adsSlot, url });
   }
 
-  if (scriptName === "****BOTTOM ANCHOR****") {
+  if (scriptName === "BOTTOM ANCHOR") {
     return getScript2({ adsSlot, url });
   }
 
-  if (scriptName === "****TOP ANCHOR AD****") {
+  if (scriptName === "TOP ANCHOR AD") {
     return getScript3({ adsSlot, url });
   }
 
-  if (scriptName === "****INTERSTITIAL Ad****") {
+  if (scriptName === "INTERSTITIAL Ad") {
     return getScript4({ adsSlot, url });
   }
 
-  if (scriptName === "****Bottom sticky refresh ad****") {
+  if (scriptName === "Bottom sticky refresh ad") {
     return getScript5({ adsSlot, url });
   }
 
-  if (scriptName === "******RESPONSIVE Ad******") {
+  if (scriptName === "RESPONSIVE Ad") {
     return getScript6({ adsSlot, url });
   }
 
-  if (scriptName === "***300X250 ad***") {
+  if (scriptName === "300X250 ad") {
     return getScript7({ adsSlot, url });
   }
 
-  if (scriptName === "***300X600 Side-bar ad***") {
+  if (scriptName === "300X600 Side-bar ad") {
     return getScript8({ adsSlot, url });
   }
 
-  if (scriptName === "*****FLYING CARPET Ad****") {
+  if (scriptName === "FLYING CARPET Ad") {
     return getScript9({ adsSlot, url });
   }
 
-  if (scriptName === "***LEFT SIDE STICKY Ad***") {
+  if (scriptName === "LEFT SIDE STICKY Ad") {
     return getScript10({ adsSlot, url });
   }
 
-  if (scriptName === "****RIGHT SIDE STICKY AD****") {
+  if (scriptName === "RIGHT SIDE STICKY AD") {
     return getScript11({ adsSlot, url });
   }
 };

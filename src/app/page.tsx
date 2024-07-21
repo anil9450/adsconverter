@@ -10,6 +10,8 @@ export default function Home() {
   const [url, setUrl] = useState("");
   const [output, setOutput] = useState("");
   const [scriptName, setScriptName] = useState("Click to Select");
+  const [darkMode, setDarkMode] = useState(false);
+
   /* const [currentScript, setCurrentScript] = useState("Click to Select"); */
 
   const handleConvert = async () => {
@@ -38,7 +40,7 @@ export default function Home() {
   const copyToClipboard = useClipboardCopy();
 
   return (
-    <main className="">
+    <main className={`${darkMode ? "dark" : ""} text-black`}>
       <div className="m-4">
         <div className="grid sm:grid-cols-3 sm:gap-32 gap-4 grid-cols">
           <div className="flex-auto mt-8">
@@ -49,79 +51,77 @@ export default function Home() {
               value={scriptName}
             >
               <Dropdown.Item
-                value={"***POP-UP Ad***"}
-                onClick={() => handleOnChange("***POP-UP Ad***")}
+                value={"POP-UP Ad"}
+                onClick={() => handleOnChange("POP-UP Ad")}
               >
-                ***POP-UP Ad***
+                POP-UP Ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"****BOTTOM ANCHOR****"}
-                onClick={() => handleOnChange("****BOTTOM ANCHOR****")}
+                value={"BOTTOM ANCHOR"}
+                onClick={() => handleOnChange("BOTTOM ANCHOR")}
               >
-                ****BOTTOM ANCHOR****
+                BOTTOM ANCHOR
               </Dropdown.Item>
               <Dropdown.Item
-                value={"****TOP ANCHOR AD****"}
-                onClick={() => handleOnChange("****TOP ANCHOR AD****")}
+                value={"TOP ANCHOR AD"}
+                onClick={() => handleOnChange("TOP ANCHOR AD")}
               >
-                ****TOP ANCHOR AD****
+                TOP ANCHOR AD
               </Dropdown.Item>
               <Dropdown.Item
-                value={"****INTERSTITIAL Ad****"}
-                onClick={() => handleOnChange("****INTERSTITIAL Ad****")}
+                value={"INTERSTITIAL Ad"}
+                onClick={() => handleOnChange("INTERSTITIAL Ad")}
               >
-                ****INTERSTITIAL Ad****
+                INTERSTITIAL Ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"****Bottom sticky refresh ad****"}
-                onClick={() =>
-                  handleOnChange("****Bottom sticky refresh ad****")
-                }
+                value={"Bottom sticky refresh ad"}
+                onClick={() => handleOnChange("Bottom sticky refresh ad")}
               >
-                ****Bottom sticky refresh ad****
+                Bottom sticky refresh ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"******RESPONSIVE Ad******"}
-                onClick={() => handleOnChange("******RESPONSIVE Ad******")}
+                value={"RESPONSIVE Ad"}
+                onClick={() => handleOnChange("RESPONSIVE Ad")}
               >
-                ******RESPONSIVE Ad******
+                RESPONSIVE Ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"***300X250 ad***"}
-                onClick={() => handleOnChange("***300X250 ad***")}
+                value={"300X250 ad"}
+                onClick={() => handleOnChange("300X250 ad")}
               >
-                ***300X250 ad***
+                300X250 ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"***300X600 Side-bar ad***"}
-                onClick={() => handleOnChange("***300X600 Side-bar ad***")}
+                value={"300X600 Side-bar ad"}
+                onClick={() => handleOnChange("300X600 Side-bar ad")}
               >
-                ***300X600 Side-bar ad***
+                300X600 Side-bar ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"*****FLYING CARPET Ad****"}
-                onClick={() => handleOnChange("*****FLYING CARPET Ad****")}
+                value={"FLYING CARPET Ad"}
+                onClick={() => handleOnChange("FLYING CARPET Ad")}
               >
-                *****FLYING CARPET Ad****
+                FLYING CARPET Ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"***LEFT SIDE STICKY Ad***"}
-                onClick={() => handleOnChange("***LEFT SIDE STICKY Ad***")}
+                value={"LEFT SIDE STICKY Ad"}
+                onClick={() => handleOnChange("LEFT SIDE STICKY Ad")}
               >
-                ***LEFT SIDE STICKY Ad***
+                LEFT SIDE STICKY Ad
               </Dropdown.Item>
               <Dropdown.Item
-                value={"****RIGHT SIDE STICKY AD****"}
-                onClick={() => handleOnChange("****RIGHT SIDE STICKY AD****")}
+                value={"RIGHT SIDE STICKY AD"}
+                onClick={() => handleOnChange("RIGHT SIDE STICKY AD")}
               >
-                ****RIGHT SIDE STICKY AD****
+                RIGHT SIDE STICKY AD
               </Dropdown.Item>
             </Dropdown>
           </div>
 
           <div className="flex-auto">
             <label className="block text-base font-semibold leading-7 text-blue-600">
-              Ads Slot
+              Enter Ads Slot
             </label>
             <p>
               <input
@@ -135,7 +135,7 @@ export default function Home() {
 
           <div className="flex-auto">
             <label className="block text-base font-semibold leading-7 text-blue-600">
-              Website URL
+              Enter Website URL
             </label>
             <p>
               <input
@@ -182,7 +182,10 @@ export default function Home() {
             </span>
           </label>
           <div className="mt-5">
-            <textarea className="w-full h-72 rounded p-5" value={output} />
+            <textarea
+              className="w-full h-72 rounded p-5 text-black"
+              value={output}
+            />
           </div>
         </div>
       </div>
