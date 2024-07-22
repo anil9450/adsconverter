@@ -196,7 +196,9 @@ export default function Home() {
           <Image src="/image/White.png" width={100} height={100} alt="" />
         </div>
         <div className="col-start-12 mt-8">
-          <h1 className="font-bold">Proudely powered by Monetiscope</h1>
+          <h1 className="font-bold text-blue-600">
+            Proudely powered by Monetiscope
+          </h1>
         </div>
       </div>
     </main>
