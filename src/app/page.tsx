@@ -4,6 +4,7 @@ import useClipboardCopy from "@/hooks/useClipboardCopy";
 /* import Dropdown from "@/components/Dropdown"; */
 import { Dropdown } from "flowbite-react";
 import data from "./data";
+import Image from "next/image";
 
 export default function Home() {
   const [ads, setAds] = useState("");
@@ -187,6 +188,15 @@ export default function Home() {
               value={output}
             />
           </div>
+        </div>
+      </div>
+
+      <div className="grid grid-rows-1 grid-flow-col">
+        <div className="col-start-2">
+          <Image src="/image/White.png" width={100} height={100} alt="" />
+        </div>
+        <div className="col-start-12 mt-8">
+          <h1 className="font-bold">Proudely powered by Monetiscope</h1>
         </div>
       </div>
     </main>
